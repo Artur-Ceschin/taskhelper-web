@@ -1,5 +1,15 @@
 import './global.css'
 
+import { Helmet, HelmetProvider } from 'react-helmet-async'
+import { RouterProvider } from 'react-router-dom'
+
+import { router } from './routes'
+
 export function App() {
-  return <h1>TaskHelper</h1>
+  return (
+    <HelmetProvider>
+      <Helmet titleTemplate="%s | taskhelpers" />
+      <RouterProvider router={router} />
+    </HelmetProvider>
+  )
 }
