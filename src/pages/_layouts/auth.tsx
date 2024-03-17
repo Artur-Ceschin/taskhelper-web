@@ -6,7 +6,7 @@ import GardenHelper from '@/assets/garden-helper.png'
 export function AuthLayout() {
   return (
     <div className="grid min-h-screen grid-cols-2">
-      <div className="flex flex-col items-center justify-center">
+      <div className="relative flex flex-col items-center justify-center">
         <Outlet />
       </div>
 
