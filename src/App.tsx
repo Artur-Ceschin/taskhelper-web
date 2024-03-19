@@ -10,7 +10,7 @@ import { router } from './routes'
 export function App() {
   return (
     <HelmetProvider>
-      <ThemeProvider storageKey="taskhelpers-key" defaultTheme="dark">
+      <ThemeProvider storageKey="taskhelpers-key" defaultTheme="light">
         <Helmet titleTemplate="%s | taskhelpers" />
         <RouterProvider router={router} />
         <Toaster richColors position="top-left" />
