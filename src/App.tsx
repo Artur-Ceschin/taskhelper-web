@@ -4,14 +4,17 @@ import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { RouterProvider } from 'react-router-dom'
 import { Toaster } from 'sonner'
 
+import { ThemeProvider } from './components/theme/theme-provider'
 import { router } from './routes'
 
 export function App() {
   return (
     <HelmetProvider>
-      <Helmet titleTemplate="%s | taskhelpers" />
-      <RouterProvider router={router} />
-      <Toaster richColors position="top-left" />
+      <ThemeProvider storageKey="taskhelpers-key" defaultTheme="dark">
+        <Helmet titleTemplate="%s | taskhelpers" />
+        <RouterProvider router={router} />
+        <Toaster richColors position="top-left" />
+      </ThemeProvider>
     </HelmetProvider>
   )
 }
