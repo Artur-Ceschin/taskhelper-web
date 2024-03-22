@@ -22,7 +22,7 @@ export function Header() {
             Início
           </NavLink>
 
-          <NavLink to="/works">
+          <NavLink to="/jobs">
             <Briefcase className="h-4 w-4" />
             Trabalhos
           </NavLink>
